@@ -100,11 +100,11 @@ $(".stats_label").click(function(event) {
     $('#stats tbody').empty();
     $('#errors tbody').empty();
     alternate = false;
-    totalRow = report.stats.pop()
-    sortedStats = (report.stats).sort(sortBy(sortAttribute, desc))
-    sortedStats.push(totalRow)
-    $('#stats tbody').jqoteapp(stats_tpl, sortedStats);
-    alternate = false;
+//     totalRow = report.stats.pop()
+//     sortedStats = (report.stats).sort(sortBy(sortAttribute, desc))
+//     sortedStats.push(totalRow)
+//     $('#stats tbody').jqoteapp(stats_tpl, sortedStats);
+//     alternate = false;
     $('#errors tbody').jqoteapp(errors_tpl, (report.errors).sort(sortBy(sortAttribute, desc)));
 });
 
@@ -120,18 +120,18 @@ function updateStats() {
         if (typeof report.slave_count !== "undefined")
             $("#slaveCount").html(report.slave_count)
 
-        $('#stats tbody').empty();
-        $('#errors tbody').empty();
+//         $('#stats tbody').empty();
+//         $('#errors tbody').empty();
 
-        alternate = false;
+//         alternate = false;
 
-        totalRow = report.stats.pop()
-        sortedStats = (report.stats).sort(sortBy(sortAttribute, desc))
-        sortedStats.push(totalRow)
-        $('#stats tbody').jqoteapp(stats_tpl, sortedStats);
-        alternate = false;
+        //totalRow = report.stats.pop()
+        //sortedStats = (report.stats).sort(sortBy(sortAttribute, desc))
+        //sortedStats.push(totalRow)
+        //$('#stats tbody').jqoteapp(stats_tpl, sortedStats);
+        //alternate = false;
         $('#errors tbody').jqoteapp(errors_tpl, (report.errors).sort(sortBy(sortAttribute, desc)));
-        setTimeout(updateStats, 2000);
+        setTimeout(updateStats, 5000);
     });
 }
 updateStats();
